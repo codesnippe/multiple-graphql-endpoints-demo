@@ -1,0 +1,24 @@
+scalar Date
+scalar Long
+
+type Query {
+    book(id: Long): BookResponse
+    books: [BookResponse]
+    author(id: Long): AuthorResponse
+    authors: [AuthorResponse]
+}
+
+type BookResponse {
+    id: Long
+    name: String
+    date: Date
+    review: String
+    authorId: Long
+}
+
+type AuthorResponse {
+    id: Long
+    firstName: String
+    lastName: String
+    privateInfo: String
+}
